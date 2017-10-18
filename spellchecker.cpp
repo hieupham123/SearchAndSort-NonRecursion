@@ -23,7 +23,7 @@ void removearrnum(string arr[], int mispcount);
 void lowercasenode(struct node* head);
 
 //variables
-//string diction_link = "dictionary.txt", input_link = "input1.txt";
+string diction_link = "dictionary.txt", input_link = "input1.txt";
 string diction_word, input_word;
 string tempword, tempor, itemp, misp = ""; //temporary strings
 string* diction_arr, *input_arr, *misp_arr; //dynamic arrays
@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 	int nodecount = 1, inputcount = 1, count = 0, icount = 0, mispcount = 0;//Counters
 
 
-	if (argc < 2) {
+	/*if (argc < 2) {
 		std::cerr << "Usage: spellchecker input=input.txt;dict=dictionary.txt;recursive=y" << std::endl;
 		return -1;
 	}
@@ -67,10 +67,10 @@ int main(int argc, char* argv[])
 	else {
 		recursiveFlag = false;
 		cout << "Recursive Flag = False" << endl;
-	}
+	}*/
 
-	//dictionfile.open(diction_link);//Opening Dictionary
-	//inputfile.open(input_link);//opening input file
+	dictionfile.open(diction_link);//Opening Dictionary
+	inputfile.open(input_link);//opening input file
 
 	if (!dictionfile.is_open())//Checks if dictionary opens
 	{
